@@ -1,5 +1,5 @@
 try:import os;from requests import post;from time import sleep;from colorama import Fore
-except ModuleNotFoundError:exit('[!] Download The Missing Module !')
+except Exception as e:print(f'[!] Download The Missing Module ! , {e}');exit()
 def header():
     print("""
     
